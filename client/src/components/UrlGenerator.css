@@ -1,0 +1,143 @@
+.web-container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center; 
+    background-color: #fff69d;
+    flex-direction: column;
+}
+
+.generator-container {
+    display: flex;
+    width: 100vw;
+    height: 50vh;
+    align-items: center;
+    justify-content: center; 
+    background-color: #7ecd94;
+    flex-direction: column;
+}
+
+.warning {
+    margin-bottom: 20px;
+    color: #d54360;
+    width: calc(100vw - 50px);
+    display: none;
+    margin-left: 50px;
+}
+
+.generator-form {
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.url-input {
+    margin-left: 50px;
+    width: 68%;
+    height: 60px;
+    padding: 0px 20px;
+    border: none;
+    color: #59202b;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+.url-input::placeholder {
+    color: #edc7c7;
+}
+
+.url-input:focus {
+    outline: none;
+}
+
+.generate-button {
+    border: none;
+    width: 15%;
+    height: 60px;
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+    font-size: 20px;
+    background-color: #d54360;
+    cursor: pointer;
+    margin-right: 50px;
+}
+
+.generate-button:hover {
+    background-color: #9b1a33;
+}
+
+.result-container {
+    background-color: white;
+    width: calc(100vw - 140px);
+    height: 60px;
+    z-index: 10;
+    margin-top: 15px;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    padding: 0px 20px;
+    color: #59202b;
+    justify-content: space-between;
+}
+
+.copy-button {
+    border: none;
+    width: 80px;
+    height: 45px;
+    border-radius: 10px;
+    color: #d54360;
+    font-size: 20px;
+    background-color: #f2f0d9;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.copy-button:hover {
+    background-color: #CADFA7;
+}
+
+a {
+    color: #d54360;
+}
+
+@media screen and (max-width: 900px) {
+    .url-input {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 660px) {
+    .url-input {
+        width: 80%;
+        margin-left: 0;
+        margin-bottom: 30px;
+    }
+
+    .generator-form {
+        flex-direction: column;
+    }
+
+    .generate-button {
+        width: calc(80% + 40px);
+        margin-right: 0px;
+    }
+
+    .result-container {
+        width: 80%;
+        flex-direction: column;
+        height: 140px;
+        justify-content: space-around;
+    }
+
+    .copy-button {
+        width: 90%;
+    }
+}

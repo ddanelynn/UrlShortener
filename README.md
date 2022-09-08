@@ -9,6 +9,11 @@
 ### Tech Stack
 ReactJs - Express - NodeJs - MySql
 
+### Setup Instruction
+* Navigate to client directory, run `npm start`
+* Navigate to server directory, run `nodemon index.js`
+* You must have mySql installed
+
 ### Mobile UI
 ![Screenshot 2022-09-08 at 5 57 57 PM](https://user-images.githubusercontent.com/66818697/189093691-8f19fe01-f835-4f4f-9435-67ad09486105.png)
 

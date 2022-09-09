@@ -13,6 +13,21 @@ ReactJs - Express - NodeJs - MySql
 * Navigate to client directory, run `npm start`
 * Navigate to server directory, run `nodemon index.js`
 * You must have mySql installed
+  * Since local instance is used, please set up the database on your side.
+  * Create a connection:
+  ```
+      host: 'localhost',
+      user: 'root',
+      password: 'password',
+      database: 'URLShortenerDB'
+  ```
+  * Create a Schema named `URLShortenerDB`
+  * Create a table named `url`
+  * Create columns as follow
+  <br/>
+  <img width="153" alt="Screenshot 2022-09-09 at 11 32 28 PM" src="https://user-images.githubusercontent.com/66818697/189387337-7195fa24-7f99-45fb-8c1a-c1ab489791ec.png">
+
+
 
 ### Mobile UI
 ![Screenshot 2022-09-08 at 5 57 57 PM](https://user-images.githubusercontent.com/66818697/189093691-8f19fe01-f835-4f4f-9435-67ad09486105.png)

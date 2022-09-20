@@ -8,6 +8,20 @@ export const UrlGenerator = () => {
 
     const [longUrl, setLongUrl] = useState('');
     const [shortUrl, setShortUrl] = useState('');
+    const [mostPopularUrl, setMostPopularUrl] = useState('');
+
+    const displayMostPopularUrl = () => {
+        Axios.post('http://localhost:3001/get-most-popular').then((response) => setMostPopularUrl(formatResponse(response.data)))
+    }
+
+    const formatResponse = (data) => {
+        let resultString = "";
+        data.forEach((row) => {
+            resultString += row.shortUrl + ": " + row.count + "\n";
+        })
+        return resultString
+    }
+
     const submitUrl = () => {
         if (document.body.querySelector('.warning').style.display == 'flex') {
             document.body.querySelector('.warning').style.display = 'none';
@@ -19,6 +33,7 @@ export const UrlGenerator = () => {
         Axios.post('http://localhost:3001/api/shortener', {
             longUrl: longUrl,
         }).then((response) => setShortUrl(response.data))
+        displayMostPopularUrl();
     }
 
     const toggleWarning = () => {
@@ -47,6 +62,9 @@ export const UrlGenerator = () => {
                     <div>Shortened URL: {" "}
                         <a href={shortUrl} target="_blank">{shortUrl}</a></div>
                     <div className="copy-button" onClick={copyToClipboard}>Copy</div>
+                </div>
+                <div className="most-popular">Most popular link: 
+                    <a href={mostPopularUrl}>{mostPopularUrl}</a>
                 </div>
             </div>
         </div>
